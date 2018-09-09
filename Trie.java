@@ -1,4 +1,5 @@
 package folderOne.Tries;
+import java.util.Set;
 
 public class Trie{
 	public Node root;
@@ -52,17 +53,20 @@ public class Trie{
 	}
 
 	public void traverse(Node node, String word) {
+		if(node.isCompletedWord){
+			System.out.println(word);
+			}		
 		for (Character c : node.children.keySet()){
 			System.out.println(c);
-			if(node.children.get(c).isCompletedWord){
-				System.out.println("word end");
-				}		
-			traverse(node.children.get(c) , word= word+c);
+			traverse(node.children.get(c) , word+c);
 			}
 	}
 	
 	public void printAll() {
-		String word = "";
-		traverse(this.root, word);
+		traverse(this.root, "");
 	}
+	
+	
+	
+	
 }

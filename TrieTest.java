@@ -12,8 +12,10 @@ public class TrieTest {
 		test1.insertWord("try");
 //		test1.isPrefixValid("cz");
 //		test1.isWordValid("cx");
-//		 test1.traverse(test1.root, "");
+//		test1.traverse(test1.root, "");
 		test1.printAll();
+//		test1.displayAllWords();
+		
 		
 	}
 }
